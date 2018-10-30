@@ -19,19 +19,19 @@ pipeline {
         }
 		stage('Copy Json file'){
             steps {
-                sh 'cp /home/build/gcp-terraform/terraform-account.json /home/build/.jenkins/workspace/Terraform-Demo/Terraform-Demo'
+                sh 'cp /home/build/gcp-terraform/terraform-account.json /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud'
             }
         }
         
         stage('terraform init') {
             steps {
-                sh 'cd /home/build/.jenkins/workspace/Terraform-Demo/Terraform-Demo; terraform init'
+                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform init'
             }
         }
        
         stage('terraform plan') {
             steps {
-                sh 'cd /home/build/.jenkins/workspace/Terraform-Demo/Terraform-Demo; terraform plan'
+                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform plan'
             }
         }
         stage('terraform ended') {
@@ -43,3 +43,5 @@ pipeline {
         
     }
 }
+
+
