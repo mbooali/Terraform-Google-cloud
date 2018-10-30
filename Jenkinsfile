@@ -38,6 +38,8 @@ pipeline {
 	   stage('terraform apply') {
             steps {
                 sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform apply'
+	    }
+	   }
 		    
         stage('terraform ended') {
             steps {
