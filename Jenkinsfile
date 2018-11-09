@@ -37,7 +37,7 @@ pipeline {
 	
 	 stage('terraform apply') {
             steps {
-                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform apply -auto -approve'
+                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform apply -auto-approve'
             }
 	 }
 		 
