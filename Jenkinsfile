@@ -34,7 +34,13 @@ pipeline {
                 sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform plan'
             }
         }
-		    
+	
+	 stage('terraform apply') {
+            steps {
+                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform apply -auto -approve'
+            }
+	 }
+		 
         stage('terraform ended') {
             steps {
                 sh 'echo "Ended....!!"'
