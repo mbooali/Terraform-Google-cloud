@@ -40,13 +40,7 @@ pipeline {
                 sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform apply -auto-approve'
             }
 	 }
-	    
-	    stage('terraform destroy') {
-            steps {
-                sh 'cd /home/build/.jenkins/workspace/Terraform-GC-Demo/Terraform-Google-cloud; terraform destroy -auto-approve'
-            }
-	 }
-		 
+	    	 
         stage('terraform ended') {
             steps {
                 sh 'echo "Ended....!!"'
