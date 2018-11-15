@@ -16,7 +16,7 @@ resource "google_compute_instance" "default" {
   }
 }
 provider "google" {
-  credentials = "${file("terraform-account.json")}"
+  credentials = "${file('terraform-account.json')}"
   project     = "cool-album-220315"
   region      = "us-central1"
 }
